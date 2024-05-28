@@ -56,3 +56,11 @@
 
 Remember to keep your local repository up to date by periodically pulling the latest changes from the main branch using `git pull origin main` before creating new branches and starting new work.
 `N.B` remember to only create a pull request when we are in a group huddle.
+
+# Color Palette
+
+!pallette("./assets/elemental-showdown.png")
+
+# Font Family
+
+Exo2 is the custom font that we are using throughout the application as its a readable font and unique enough to display some originality.
