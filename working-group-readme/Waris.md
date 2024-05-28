@@ -18,13 +18,13 @@ For the Code Institute Bootcamp Hackathon #2, our team decided to complete the..
 
 - __Landing page__
 
-- ![wireframes](../assets/wireframe-landing-page.png)
+- ![wireframes](../assets/img/wireframe-landing-page.png)
 
 - __Game page__
 
-- ![wireframes](../assets/wireframe-game-running.png)
+- ![wireframes](../assets/img/wireframe-game-running.png)
 
-- ![wireframes](../assets/wireframe-gameover-modal.png)
+- ![wireframes](../assets/img/wireframe-gameover-modal.png)
 
 ### Existing Features
 
