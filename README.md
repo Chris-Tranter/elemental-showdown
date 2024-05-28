@@ -1,1 +1,1 @@
-# elemental-showdown
+# elemental-showdown Group Hackathon
