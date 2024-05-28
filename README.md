@@ -53,6 +53,7 @@
 9. Merge the pull request:
    Once your pull request is approved and all discussions are resolved, the project maintainers will merge your changes into the main branch of the repository.
    Congratulations! Your changes are now part of the project.
+   `git pull origin main`
 
 Remember to keep your local repository up to date by periodically pulling the latest changes from the main branch using `git pull origin main` before creating new branches and starting new work.
 `N.B` remember to only create a pull request when we are in a group huddle.
