@@ -60,7 +60,7 @@ Remember to keep your local repository up to date by periodically pulling the la
 
 # Color Palette
 
-!pallette("./assets/img/elemental-showdown.png")
+[!pallette]("./assets/img/elemental-showdown.png")
 
 # Font Family
 
