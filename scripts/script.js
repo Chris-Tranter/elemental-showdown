@@ -74,8 +74,7 @@ window.addEventListener("click", (event) => {
 
 // ...
 
-// logic for game-anonymous.html + score tracking
-
+// Scoring
 let playerScore = 0;
 let computerScore = 0;
 
@@ -83,41 +82,31 @@ const scoreDisplay = document.getElementById('score');
 const resultDisplay = document.getElementById('result');
 
 function updateScore() {
-    scoreDisplay.innerText = `Player: ${playerScore} | Computer: ${computerScore}`;
-}
+   scoreDisplay.innerText = `Player: ${playerScore} | Computer: ${computerScore}`;
+} 
 
-function playGame(playerChoice) {
-  const choices = ['fire', 'earth', 'air', 'water', 'wood', 'iron'];
-  const computerChoice = choices[Math.ceiling(Math.random() * 6)];
+function playGame(playerChoice) { const choices = ['fire', 'earth', 'air', 'water', 'wood', 'iron'];
+ let computerChoice = choices[Math.floor(Math.random() * choices.length)]; 
+ let result = ''; 
+ if (playerChoice === computerChoice) { result = "You have checked the Calamity's power for now, Shadow Warrior!"; 
 
-  let result = '';
+ } else if ((playerChoice === 'fire' && computerChoice === 'wood') || 
+ (playerChoice === 'fire' && computerChoice === 'air') || 
+ (playerChoice === 'earth' && (computerChoice === 'water' || 
+ computerChoice === 'fire')) || 
+ (playerChoice === 'air' && (computerChoice === 'earth' || 
+ computerChoice === 'water')) || 
+ (playerChoice === 'water' && (computerChoice === 'fire' || 
+ computerChoice === 'iron')) || (playerChoice === 'wood' && (computerChoice === 'earth' ||
+  computerChoice === 'iron')) || (playerChoice === 'iron' && (computerChoice === 'wood' || 
+  computerChoice === 'air')))
+   { result = `You have succeeded this trial, Shadow Warrior! ${playerChoice} beats ${computerChoice}.`;
+   playerScore++; } 
+   else { result = `Your actions have doomed the world, Shadow Warrior! ${computerChoice} beats ${playerChoice}.`;
+    computerScore++; }
+     resultDisplay.innerText = result ;
+      updateScore(); console.log(playerScore); }
 
-  if (playerChoice === computerChoice) {
-      result = `You have checked the Calamity's power for now, Shadow Warrior!`;
-  } else if (
-      (playerChoice === 'fire' && computerChoice === 'air, wood') ||
-      (playerChoice === 'earth' && computerChoice === 'water, fire') ||
-      (playerChoice === 'air' && computerChoice === 'earth, water')
-      (playerChoice === 'water' && computerChoice === 'fire, iron') ||
-      (playerChoice === 'wood' && computerChoice === 'earth, iron') ||
-      (playerChoice === 'iron' && computerChoice === 'wood, air')
-  ) {
-      result = `You have suceeded this trial, Shadow Warrior! ${playerChoice} beats ${computerChoice}.`;
-      playerScore++;
-  } else {
-      result = `Your actions have doomed the world, Shadow Warrior! ${computerChoice} beats ${playerChoice}.`;
-      computerScore++;
-  }
-
-  document.getElementById('result').innerText = result;
-}
-
-resultDisplay.innerText = result;
-    updateScore();
-
-    console.log(playerScore)
-
-// logic for game-name.html
 
 // Retrieve the player name from local storage
 var playerName = localStorage.getItem("playerName");
@@ -216,4 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //   ...
+
+
+
 
