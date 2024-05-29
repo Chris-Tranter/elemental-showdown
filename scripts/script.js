@@ -76,78 +76,7 @@ window.addEventListener("click", (event) => {
 
 // logic for game-anonymous.html
 
-let timerInterval;
-let remainingTime = 5;
-
-function updateScoreDisplay() {
-  document.getElementById('score').innerText = `Player: ${playerScore} | Computer: ${computerScore}`;
-}
-
-function playGame(playerChoice) {
-  const choices = ['fire', 'earth', 'air', 'water', 'wood', 'iron'];
-  let computerChoice = choices[Math.floor(Math.random() * choices.length)];
-  let result = ''; 
-  console.log('player choice', playerChoice);
-  console.log('computer choice', computerChoice);
-  
-  let playerScore = 0;
-  let computerScore = 0;
-  if (playerChoice === computerChoice) {
-    result = "You have checked the Calamity's power for now, Shadow Warrior!";
-  } else if (
-    (playerChoice === 'fire' && (computerChoice === 'air' || computerChoice === 'wood')) ||
-    (playerChoice === 'earth' && (computerChoice === 'water' || computerChoice === 'fire')) ||
-    (playerChoice === 'air' && (computerChoice === 'earth' || computerChoice === 'water')) ||
-    (playerChoice === 'water' && (computerChoice === 'fire' || computerChoice === 'iron')) ||
-    (playerChoice === 'wood' && (computerChoice === 'earth' || computerChoice === 'iron')) ||
-    (playerChoice === 'iron' && (computerChoice === 'wood' || computerChoice === 'air'))
-  ) {
-    result = `You have succeeded this trial, Shadow Warrior! ${playerChoice} beats ${computerChoice}.`;
-    playerScore++; 
-    console.log('playerwins');
-    let roundWinner = 'player';
-  } else {
-    result = `Your actions have doomed the world, Shadow Warrior! ${computerChoice} beats ${playerChoice}.`;
-    computerScore++;
-    console.log('computerwins');
-    let roundWinner = 'computer'; 
-  }
-  console.log('player score', playerScore);
-  console.log('computer score', computerScore);
-  console.log('result', result);
-
-  document.getElementById('result').innerText = result;
-  updateScoreDisplay();
-}
-
-function updateScore();
-
-if roundWinner = 'player' 
-
-
-
-
-
-
-
-
-
-
-// if computer win update computer score by 1
-// if draw no change
-// if player wins update player score by 1
-
-
-
-
-
-
-
-
-
-
-
-
+// ...
 
 // logic for game-name.html
 
@@ -159,7 +88,6 @@ var welcomeMessage = document.getElementById("welcomeMessage");
 if (welcomeMessage) {
   welcomeMessage.textContent = "Welcome, " + playerName + "!";
 }
-
 // logic for the timer
 let roundDuration = 5;
 let timer;
