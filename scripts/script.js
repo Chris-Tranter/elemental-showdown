@@ -76,6 +76,8 @@ window.addEventListener("click", (event) => {
 
 // logic for game-anonymous.html
 
+// ...
+
 // logic for game-name.html
 
 // Retrieve the player name from local storage
@@ -86,7 +88,6 @@ var welcomeMessage = document.getElementById("welcomeMessage");
 if (welcomeMessage) {
   welcomeMessage.textContent = "Welcome, " + playerName + "!";
 }
-
 // logic for the timer
 let roundDuration = 5;
 let timer;

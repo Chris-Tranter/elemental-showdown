@@ -417,7 +417,7 @@ strong {
   left: 0;
   top: 0;
   height: 100%;
-  width: 4px;
+  width: 2px;
   background-color: var(--iron);
   border-radius: 2px;
 }
@@ -557,6 +557,13 @@ strong {
   max-width: 660px;
   margin-left: auto;
   margin-right: auto;
+  border: #333333;
+  border-radius: 10px;
+  padding: 10px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 3rem;
 }
 
 .card {
@@ -609,6 +616,7 @@ strong {
   top: -1.5rem;
   left: 50%;
   transform: translateX(-50%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* ... */
@@ -622,23 +630,36 @@ strong {
 }
 
 .custom-button {
-  padding: 12px 24px;
-  font-size: 18px;
+  padding: 14px 28px;
+  font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
   color: var(--air);
   background-color: var(--earth);
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  margin: 0 10px;
-  transition: background-color 0.3s ease;
+  margin: 0 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .custom-button:hover {
   background-color: var(--fire);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+.secondary-button {
+  background-color: var(--iron);
+  color: var(--air);
+}
+
+.secondary-button:hover {
+  background-color: var(--wood);
+}
+
+/* ... */
 /* styles for game-anonymous.html */
 
 /* styles for game-name.html */
