@@ -19,3 +19,7 @@ made the model for the play button and added the name function that will be disp
 made the background sound for the play button
 
 made some additional style changes to the stylesheet
+
+added a hero section and logo
+
+changed home layout and added assets from Waris
