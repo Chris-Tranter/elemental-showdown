@@ -55,6 +55,34 @@
           alt="Elemental Showdown"
         />
       </div>
+      <!-- model -->
+      <div id="playerModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Enter Your Player Name</h2>
+          <input type="text" id="playerName" placeholder="Player Name" />
+          <div class="button-container">
+            <button
+              id="playButton"
+              class="custom-button"
+              disabled
+              onclick="navigateToGame()"
+            >
+              Play
+            </button>
+            <button id="cancelButton" class="custom-button secondary-button">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="button-container">
+        <button id="openModal" class="custom-button">Sign in</button>
+        <a href="./pages/game-anonymous.html">
+          <button class="custom-button">Play anonymously</button>
+        </a>
+      </div>
+      <!-- ... -->
       <div class="header-container">
         <h1 class="header-title">Elemental Showdown</h1>
         <p class="header-subtitle">Welcome, young one!</p>
@@ -85,7 +113,7 @@
                 Check the cards below to see this for each of the 6 elements.
               </li>
               <li>
-                Beware though! You will only have 3 seconds to decide which
+                Beware though! You will only have 5 seconds to decide which
                 element you'll use in combat so act swiftly.
               </li>
             </ul>
@@ -96,25 +124,6 @@
             </p>
           </div>
         </div>
-      </div>
-
-      <!-- model -->
-      <div id="playerModal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <h2>Enter Your Player Name</h2>
-          <input type="text" id="playerName" placeholder="Player Name" />
-          <button id="playButton" disabled onclick="navigateToGame()">
-            Play
-          </button>
-        </div>
-      </div>
-
-      <div class="button-container">
-        <button id="openModal" class="custom-button">Sign in</button>
-        <a href="./pages/game-anonymous.html">
-          <button class="custom-button">Play anonymously</button>
-        </a>
       </div>
 
       <div class="card-container">
