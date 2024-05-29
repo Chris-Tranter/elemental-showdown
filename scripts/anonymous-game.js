@@ -76,10 +76,20 @@ var playAgainBtn = document.getElementById("play-again");
 var closeModalBtn = document.getElementsByClassName("close")[0];
 var exitGameBtn = document.getElementById("admit-defeat");
 var endScore = document.getElementById("battles-won")
+var endMessage = document.getElementById("end-message")
 
 openModalBtn.onclick = function () {
   modal.style.display = "block";
-  endScore.innerText = `${battlesWon}`
+  endScore.innerText = battlesWon;
+  if (battlesWon === 0) {
+    endMessage.innerText = `You won ${battlesWon} battles. Surely you can make it further than that? `
+  } else if (battlesWon === 1) {
+    endMessage.innerText = `You won ${battlesWon} battle! Congratulations you beat The Singularity once. Can you do it again?`
+  } else { 
+    endMessage.innerText = `You won ${battlesWon} battles! But can you win the war?`
+  };
+  
+  
 };
 
 closeModalBtn.onclick = function () {
