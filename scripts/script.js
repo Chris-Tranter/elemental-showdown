@@ -76,6 +76,8 @@ window.addEventListener("click", (event) => {
 
 // logic for game-anonymous.html
 
+// ...
+
 // logic for game-name.html
 
 // Retrieve the player name from local storage
