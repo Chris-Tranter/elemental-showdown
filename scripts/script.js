@@ -82,7 +82,7 @@ function playGame(playerChoice) {
   let result = '';
 
   if (playerChoice === computerChoice) {
-      result = `It's a tie! You both chose ${playerChoice}.`;
+      result = `You have checked the Calamity's power for now, Shadow Warrior! ${playerChoice}.`;
   } else if (
       (playerChoice === 'fire' && computerChoice === 'air, wood') ||
       (playerChoice === 'earth' && computerChoice === 'water, fire') ||
