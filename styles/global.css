@@ -197,33 +197,35 @@ header {
   padding: 20px;
 }
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-nav ul li {
+/* logo styles */
+.logo-link {
+  display: inline-block;
   margin-right: 20px;
 }
 
-nav ul li a {
-  color: var(--air);
-  text-decoration: none;
-  font-family: "Exo2-Medium", sans-serif;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Adjust the size as needed */
+  height: 40px;
+  background-color: var(--air);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: var(--fire);
+.logo-container img {
+  width: 30px; /* Adjust the size as needed */
+  height: auto;
+}
+
+.logo-link:hover .logo-container {
+  background-color: var(--fire);
 }
 /* audio button styles */
 .audio-toggle {
   position: fixed;
-  top: 15px;
+  top: 20px;
   right: 20px;
   padding: 10px 20px;
   font-size: 16px;
@@ -344,7 +346,48 @@ strong {
 }
 
 /* styles for index.html */
-/* main text animation */
+/* hero */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hero img {
+  max-width: 50%;
+  max-height: 50%;
+  padding: 10px;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3)); /* Add drop shadow */
+  transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+.hero img:hover {
+  transform: rotate(2deg); /* Smaller rotation on hover */
+  animation: wiggle 0.5s ease infinite; /* Slower wiggle animation */
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-2deg); /* Smaller rotation angles */
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* ... */
+
 .header-container {
   text-align: center;
   margin-top: 50px;
@@ -353,6 +396,13 @@ strong {
   animation: fadeInUp 1s ease forwards;
 }
 
+.header-container {
+  text-align: center;
+  margin-top: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
 .header-title {
   font-family: "Exo2-Bold", sans-serif;
   font-size: 3rem;
@@ -386,6 +436,7 @@ strong {
     transform: translateY(0);
   }
 }
+/* ... */
 /* model styles */
 .modal {
   display: none;
