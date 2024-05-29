@@ -665,6 +665,9 @@ strong {
 /* ... */
 /* styles for game-anonymous.html */
 
+
+
+
 .secondary-button:hover {
   background-color: var(--wood);
 }
@@ -674,9 +677,13 @@ strong {
 
 /* styles for game.html */
 
-header {
-  flex-shrink: 0;
-}
+
+
+=======
+/* styles for game-name.html */
+
+/* styles for game.html */
+
 
 #playerNameHeader {
   text-align: center;
@@ -743,11 +750,60 @@ header {
 
 .choice {
   position: absolute;
+=======
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.player-computer-container img {
+  max-width: 175px;
+  max-height: 175px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.player-name,
+.computer-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.game-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#roundResult,
+#finalResult {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.choice {
+
   width: 100px;
   height: 100px;
   border-radius: 50%;
   background-color: var(--air);
   border: none;
+  margin: 10px;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -777,6 +833,12 @@ header {
 
 .choice:nth-child(6) {
   transform: rotate(300deg) translate(200px) rotate(-300deg);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.choice:hover {
+  transform: scale(1.1);
 }
 
 .choice img {
@@ -806,6 +868,11 @@ header {
   margin-bottom: 0.5rem;
 }
 
+
+  margin-top: 2rem;
+}
+
+
 @media screen and (max-width: 600px) {
   .player-computer-container {
     flex-direction: column;
@@ -825,19 +892,32 @@ header {
   .game-circle {
     width: 300px;
     height: 300px;
+
+  .player-computer-container img {
+    max-width: 120px;
+    max-height: 120px;
+    margin-bottom: 1rem;
+  }
+
+  .choices {
+    max-width: 300px;
   }
 
   .choice {
     width: 80px;
     height: 80px;
+
+
+    margin: 5px;
+
   }
 
   .choice img {
     max-width: 50px;
     max-height: 50px;
   }
-}
 
+}
 .game-page-container {
   display: flex;
   flex-direction: column;
@@ -850,3 +930,5 @@ header {
   padding-top: 2rem;
   padding-bottom: 8rem;
 }
+}
+
