@@ -88,7 +88,7 @@ function updateScore() {
 
 function playGame(playerChoice) {
   const choices = ['fire', 'earth', 'air', 'water', 'wood', 'iron'];
-  const computerChoice = choices[Math.floor(Math.random() * 6)];
+  const computerChoice = choices[Math.ceiling(Math.random() * 6)];
 
   let result = '';
 
@@ -114,6 +114,8 @@ function playGame(playerChoice) {
 
 resultDisplay.innerText = result;
     updateScore();
+
+    console.log(playerScore)
 
 // logic for game-name.html
 
