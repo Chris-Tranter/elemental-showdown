@@ -91,9 +91,9 @@ function playGame(playerChoice) {
       (playerChoice === 'wood' && computerChoice === 'earth, iron') ||
       (playerChoice === 'iron' && computerChoice === 'wood, air')
   ) {
-      result = `You win! ${playerChoice} beats ${computerChoice}.`;
+      result = `You have suceeded this trial, Shadow Warrior! ${playerChoice} beats ${computerChoice}.`;
   } else {
-      result = `You lose! ${computerChoice} beats ${playerChoice}.`;
+      result = `Your actions have doomed the world, Shadow Warrior! ${computerChoice} beats ${playerChoice}.`;
   }
 
   document.getElementById('result').innerText = result;
