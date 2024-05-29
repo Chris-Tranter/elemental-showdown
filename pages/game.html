@@ -3,23 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicons/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./assets/favicons/android-chrome-192x192.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicons/android-chrome-192x192.png"
+    />
     <link rel="stylesheet" href="../styles/global.css" />
-    <title id="gameTitle"></title>
+    <title>Elemental Showdown</title>
   </head>
   <body>
     <h1 id="playerNameHeader"></h1>
+
+    <div class="game-container">
+      <div class="player-computer-container">
+        <div>
+          <img src="../assets/img/game-player.png" alt="Player" />
+          <div class="player-name" id="playerName"></div>
+        </div>
+        <div>
+          <img src="../assets/img/anonymous-player.png" alt="Computer" />
+          <div class="computer-name">Computer</div>
+        </div>
+      </div>
+
+      <div class="game-info">
+        <div id="score"></div>
+        <div id="roundResult"></div>
+        <div id="finalResult"></div>
+      </div>
+
+      <div class="choices">
+        <button class="choice" onclick="playGame('fire')">
+          <img src="../assets/img/fire.png" alt="Fire" />
+        </button>
+        <button class="choice" onclick="playGame('earth')">
+          <img src="../assets/img/earth.png" alt="Earth" />
+        </button>
+        <button class="choice" onclick="playGame('air')">
+          <img src="../assets/img/air.png" alt="Air" />
+        </button>
+        <button class="choice" onclick="playGame('water')">
+          <img src="../assets/img/water.png" alt="Water" />
+        </button>
+        <button class="choice" onclick="playGame('wood')">
+          <img src="../assets/img/wood.png" alt="Wood" />
+        </button>
+        <button class="choice" onclick="playGame('iron')">
+          <img src="../assets/img/iron.png" alt="Iron" />
+        </button>
+      </div>
+
+      <div id="result"></div>
+    </div>
+
+    <!-- Audio elements for sound effects -->
+    <audio id="fireSound" src="../assets/sounds/s-fire.mp3"></audio>
+    <audio id="earthSound" src="../assets/sounds/s-earth.mp3"></audio>
+    <audio id="airSound" src="../assets/sounds/s-air.mp3"></audio>
+    <audio id="waterSound" src="../assets/sounds/s-water.mp3"></audio>
+    <audio id="woodSound" src="../assets/sounds/s-wood.mp3"></audio>
+    <audio id="ironSound" src="../assets/sounds/s-iron.mp3"></audio>
+
+    <script type="text/javascript" src="/scripts/script.js"></script>
+    <script type="text/javascript" src="/scripts/game.js"></script>
     <script>
       // Retrieve the player name from local storage
       var playerName = localStorage.getItem("playerName");
-
-      // Update the page title with the player name
-      var gameTitle = document.getElementById("gameTitle");
-      gameTitle.textContent = playerName + " - Elemental Showdown";
-
       // Update the player name header
       var playerNameHeader = document.getElementById("playerNameHeader");
       playerNameHeader.textContent = "Welcome, " + playerName + "!";
+      // Update the player name under the picture
+      var playerNameElement = document.getElementById("playerName");
+      playerNameElement.textContent = playerName;
     </script>
-    <script type="text/javascript" src="../scripts/script.js"></script>
   </body>
 </html>
