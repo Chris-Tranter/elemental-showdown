@@ -75,6 +75,29 @@ window.addEventListener("click", (event) => {
 // ...
 
 // logic for game-anonymous.html
+function playGame(playerChoice) {
+  const choices = ['fire', 'earth', 'air', 'water', 'wood', 'iron'];
+  const computerChoice = choices[Math.floor(Math.random() * 6)];
+
+  let result = '';
+
+  if (playerChoice === computerChoice) {
+      result = `It's a tie! You both chose ${playerChoice}.`;
+  } else if (
+      (playerChoice === 'fire' && computerChoice === 'air, wood') ||
+      (playerChoice === 'earth' && computerChoice === 'water, fire') ||
+      (playerChoice === 'air' && computerChoice === 'earth, water')
+      (playerChoice === 'water' && computerChoice === 'fire, iron') ||
+      (playerChoice === 'wood' && computerChoice === 'earth, iron') ||
+      (playerChoice === 'iron' && computerChoice === 'wood, air')
+  ) {
+      result = `You win! ${playerChoice} beats ${computerChoice}.`;
+  } else {
+      result = `You lose! ${computerChoice} beats ${playerChoice}.`;
+  }
+
+  document.getElementById('result').innerText = result;
+}
 
 // logic for game-name.html
 

@@ -554,3 +554,44 @@ strong {
 /* styles for game-anonymous.html */
 
 /* styles for game-name.html */
+
+/* Game timer */
+#timer {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+#startBtn, #stopBtn, #resetBtn {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Button for Elemental Showdown */
+
+.choices {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.choice {
+  margin: 0 10px;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+.choice:hover {
+  background-color: #1da524;
+}
+#result {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+body {
+  text-align: center;
+  margin-top: 50px;
+}
+
+

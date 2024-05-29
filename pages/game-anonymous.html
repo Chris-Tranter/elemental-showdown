@@ -33,16 +33,26 @@
     <link rel="stylesheet" href="../styles/global.css" />
     <title>Elemental Showdown - Anonymous</title>
 
-    #timer { font-size: 48px; margin-bottom: 20px; } #startBtn, #stopBtn,
-    #resetBtn { padding: 10px 20px; margin: 5px; font-size: 16px; cursor:
-    pointer; }
+    
+
   </head>
   <body>
     <h1>Welcome to Elemental Showdown!</h1>
-    <p>Playing as Shadow warrior</p>
+    <p>Playing as Shadow Warrior</p>
 
-    <h1>Round Timer</h1>
-    <div id="timer">00:00</div>
+    <h1>Elemental Showdown</h1>
+    <div class="choices">
+        <div class="choice" onclick="playGame('fire')">Fire</div>
+        <div class="choice" onclick="playGame('earth')">Earth</div>
+        <div class="choice" onclick="playGame('air')">Air</div>
+        <div class="choice" onclick="playGame('water')">Water</div>
+        <div class="choice" onclick="playGame('wood')">Wood</div>
+        <div class="choice" onclick="playGame('iron')">Iron</div>
+    </div>
+    <div id="result"></div>
+
+    <h2>Round Timer</h2>
+    <div id="timer">00:05</div>
     <button id="startBtn">Start</button>
     <button id="stopBtn">Stop</button>
     <button id="resetBtn">Reset</button>
