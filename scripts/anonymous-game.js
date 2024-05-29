@@ -71,7 +71,8 @@ function resetGame() {
 // Lose modal
 var modal = document.getElementById("end-game-modal");
 var playAgainBtn = document.getElementById("play-again");
-var exitGameBtn = document.getElementsById("admit-defeat");
+var closeModalBtn = document.getElementsByClassName("close")[0];
+var exitGameBtn = document.getElementById("admit-defeat");
 
 openModalBtn.onclick = function () {
   modal.style.display = "block";
@@ -81,28 +82,22 @@ closeModalBtn.onclick = function () {
   modal.style.display = "none";
 };
 
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+playAgainBtn.onclick = function () {
+  navigateToGame();
+  console.log('yep')
 };
 
-playerNameInput.oninput = function () {
-  var playerName = playerNameInput.value.trim();
-  if (playerName.length > 3) {
-    playButton.disabled = false;
-  } else {
-    playButton.disabled = true;
-  }
-};
-
-playButton.onclick = function () {
-  var playerName = playerNameInput.value.trim();
-  localStorage.setItem("playerName", playerName);
-  navigateToGame(playerName);
+exitGameBtn.onclick = function () {
+  navigateToHome();
+  console.log('yep')
 };
 
 function navigateToHome() {
-  var url = "../pages/index.html";
-  window.location.href = url;
+  var url = "../index.html";
+  location.href = url;
+}
+
+function navigateToGame() {
+  var url = "./game-anonymous.html";
+  location.href = url;
 }
