@@ -16,7 +16,6 @@
       sizes="32x32"
       href="./assets/favicons/favicon-32x32.png"
     />
-    <!-- <link rel="icon" type="image/png" sizes="48x48" href="./assets/favicons/"> -->
     <link
       rel="icon"
       type="image/png"
@@ -31,79 +30,109 @@
     <link rel="shortcut icon" type="image/x-icon" href="/path/to/favicon.ico" />
     <link rel="stylesheet" href="./styles/global.css" />
     <title>Elemental Showdown</title>
-    <style>
-      body {
-          font-family: Arial, sans-serif;
-          text-align: center;
-          margin-top: 50px;
-      }
-      
-  </style>
   </head>
   <body>
-    <h1>Elemental Showdown</h1>
-    <p>Welcome young one!</p>
-    <p>
-      In a six-choice game inspired by rock-paper-scissors and the Chinese
-      philosophy of Wu Xing, the elements could interact as follows:
-    </p>
-
-    <ol>
-      <li>
-        <p>Fire:</p>
+    <header>
+      <nav>
         <ul>
-          <li>Defeats: Wood, Air</li>
-          <li>Defeated by: Water, Earth</li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#game">Game</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-      </li>
+        <!-- audio -->
+        <audio id="backgroundAudio" loop>
+          <source src="./assets/sounds/s-bg.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
 
-      <li>
-        <p>Air:</p>
+        <button id="toggleAudio" class="audio-toggle">Toggle Audio</button>
+      </nav>
+    </header>
+    <main>
+      <div class="header-container">
+        <h1 class="header-title">Elemental Showdown</h1>
+        <p class="header-subtitle">Welcome, young one!</p>
+        <p class="header-description">
+          Elemental Showdown is a six-choice game inspired by
+          rock-paper-scissors and the Chinese philosophy of Wu Xing. The
+          elements interact as follows:
+        </p>
+      </div>
+
+      <!-- model -->
+      <div id="playerModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Enter Your Player Name</h2>
+          <input type="text" id="playerName" placeholder="Player Name" />
+          <button id="playButton" disabled onclick="navigateToGame()">
+            Play
+          </button>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button id="openModal" class="custom-button">Sign in</button>
+        <a href="./pages/game-anonymous.html">
+          <button class="custom-button">Play anonymously</button>
+        </a>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <h3>Fire</h3>
+          <ul>
+            <li>Defeats: Wood, Air</li>
+            <li>Defeated by: Water, Earth</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Air</h3>
+          <ul>
+            <li>Defeats: Earth, Water</li>
+            <li>Defeated by: Fire, Iron</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Earth</h3>
+          <ul>
+            <li>Defeats: Water, Fire</li>
+            <li>Defeated by: Wood, Air</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Water</h3>
+          <ul>
+            <li>Defeats: Fire, Iron</li>
+            <li>Defeated by: Earth, Air</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Wood</h3>
+          <ul>
+            <li>Defeats: Earth, Iron</li>
+            <li>Defeated by: Fire, Water</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Iron</h3>
+          <ul>
+            <li>Defeats: Wood, Air</li>
+            <li>Defeated by: Fire, Earth</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2023 Elemental Showdown. All rights reserved.</p>
+      <nav>
         <ul>
-          <li>Defeats: Earth, Water</li>
-          <li>Defeated by: Fire, Iron</li>
+          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="#privacy">Privacy Policy</a></li>
         </ul>
-      </li>
-
-      <li>
-        <p>Earth:</p>
-        <ul>
-          <li>Defeats: Water, Fire</li>
-          <li>Defeated by: Wood, Air</li>
-        </ul>
-      </li>
-
-      <li>
-        <p>Water:</p>
-        <ul>
-          <li>Defeats: Fire, Iron</li>
-          <li>Defeated by: Earth, Air</li>
-        </ul>
-      </li>
-
-      <li>
-        <p>Wood:</p>
-        <ul>
-          <li>Defeats: Earth, Iron</li>
-          <li>Defeated by: Fire, Water</li>
-        </ul>
-      </li>
-
-      <li>
-        <p>Iron:</p>
-        <ul>
-          <li>Defeats: Wood, Air</li>
-          <li>Defeated by: Fire, Earth</li>
-        </ul>
-      </li>
-    </ol>
-
-    <button>Sign in</button>
-    <button>Play anonymously</button>
-
-    
-
-    <script src="script.js"></script>
+      </nav>
+    </footer>
 
     <script type="text/javascript" src="./scripts/script.js"></script>
   </body>
