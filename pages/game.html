@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/global.css" />
+    <title id="gameTitle"></title>
+  </head>
+  <body>
+    <h1 id="playerNameHeader"></h1>
+    <script>
+      // Retrieve the player name from local storage
+      var playerName = localStorage.getItem("playerName");
+
+      // Update the page title with the player name
+      var gameTitle = document.getElementById("gameTitle");
+      gameTitle.textContent = playerName + " - Elemental Showdown";
+
+      // Update the player name header
+      var playerNameHeader = document.getElementById("playerNameHeader");
+      playerNameHeader.textContent = "Welcome, " + playerName + "!";
+    </script>
+    <script type="text/javascript" src="../scripts/script.js"></script>
+  </body>
+</html>

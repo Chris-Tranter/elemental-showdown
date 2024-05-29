@@ -1,4 +1,555 @@
+/* fonts */
+@font-face {
+  font-family: "Exo2-Black";
+  src: url("../assets/fonts/Exo2-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo2-BlackItalic";
+  src: url("../assets/fonts/Exo2-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo2-Bold";
+  src: url("../assets/fonts/Exo2-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo2-BoldItalic";
+  src: url("../assets/fonts/Exo2-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo2-ExtraLight";
+  src: url("../assets/fonts/Exo2-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo2-ExtraLightItalic";
+  src: url("../assets/fonts/Exo2-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo2-Italic";
+  src: url("../assets/fonts/Exo2-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo2-Light";
+  src: url("../assets/fonts/Exo2-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo2-LightItalic";
+  src: url("../assets/fonts/Exo2-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo2-Medium";
+  src: url("../assets/fonts/Exo2-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo2-MediumItalic";
+  src: url("../assets/fonts/Exo2-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo2-Regular";
+  src: url("../assets/fonts/Exo2-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo2-SemiBold";
+  src: url("../assets/fonts/Exo2-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo2-SemiBoldItalic";
+  src: url("../assets/fonts/Exo2-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo2-Thin";
+  src: url("../assets/fonts/Exo2-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo2-ThinItalic";
+  src: url("../assets/fonts/Exo2-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* global styles */
+:root {
+  --fire: #ff4500;
+  --air: #fff5da;
+  --earth: #2bb32b;
+  --water: #0ba3c9;
+  --wood: #7f3500;
+  --iron: #333333;
+}
+
+body {
+  font-family: "Exo2-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: linear-gradient(
+    -45deg,
+    white,
+    var(--air),
+    #f0f8ff,
+    #e6f2ff,
+    white,
+    var(--air),
+    #f0f8ff,
+    #e6f2ff
+  );
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite, fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+/* background animations */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ... */
+/* Custom scroll bar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--air);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--earth);
+  border-radius: 6px;
+  border: 2px solid var(--air);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--wood);
+}
+/* ... */
+
+/* nav and footer */
+header {
+  background-color: var(--iron);
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: var(--air);
+  text-decoration: none;
+  font-family: "Exo2-Medium", sans-serif;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--fire);
+}
+/* audio button styles */
+.audio-toggle {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--earth);
+  color: var(--air);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.audio-toggle:hover {
+  background-color: var(--fire);
+}
+/* .. */
+footer {
+  background-color: var(--iron);
+  padding: 20px;
+  text-align: center;
+  color: var(--air);
+  font-family: "Exo2-Regular", sans-serif;
+  font-size: 1rem;
+  margin-top: 50px;
+}
+
+footer p {
+  color: var(--air);
+  margin-bottom: 10px;
+}
+
+footer nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer nav ul li {
+  margin-right: 10px;
+}
+
+footer nav ul li a {
+  color: var(--air);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+  color: var(--fire);
+}
+
+/* ... */
+
+h1 {
+  font-family: "Exo2-Bold", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--iron);
+}
+
+h2 {
+  font-family: "Exo2-SemiBold", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--iron);
+}
+
+h3 {
+  font-family: "Exo2-Medium", sans-serif;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--iron);
+}
+
+h4 {
+  font-family: "Exo2-Regular", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--iron);
+}
+
+h5 {
+  font-family: "Exo2-Light", sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--iron);
+}
+
+h6 {
+  font-family: "Exo2-ExtraLight", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--iron);
+}
+
+p {
+  font-family: "Exo2-Regular", sans-serif;
+  margin-bottom: 1rem;
+  color: var(--iron);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+em {
+  font-family: "Exo2-Italic", sans-serif;
+}
+
+strong {
+  font-family: "Exo2-Bold", sans-serif;
+}
+
 /* styles for index.html */
+/* main text animation */
+.header-container {
+  text-align: center;
+  margin-top: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.header-title {
+  font-family: "Exo2-Bold", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: var(--iron);
+}
+
+.header-subtitle {
+  font-family: "Exo2-Medium", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--iron);
+}
+
+.header-description {
+  font-family: "Exo2-Regular", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--iron);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* model styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background-color: var(--air);
+  margin: 15% auto;
+  padding: 30px;
+  border: none;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+.modal-content h2 {
+  font-family: "Exo2-Bold", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--iron);
+}
+
+.close {
+  color: var(--iron);
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--fire);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#playerName {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid var(--iron);
+  border-radius: 4px;
+  font-size: 16px;
+  color: var(--iron);
+  background-color: white;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+#playerName:focus {
+  outline: none;
+  border-color: var(--earth);
+}
+
+#playButton {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--air);
+  background-color: var(--earth);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#playButton:disabled {
+  background-color: var(--iron);
+  cursor: not-allowed;
+}
+
+#playButton:hover {
+  background-color: var(--fire);
+}
+/* ... */
+
+/* cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  max-width: 660px; /* Adjusted to fit 3 cards per row */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  width: 200px;
+  height: 150px;
+  border: black solid;
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s, box-shadow 0.3s;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--iron);
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--iron);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ... */
+
+/* buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.custom-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--air);
+  background-color: var(--earth);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: var(--fire);
+}
 
 /* styles for game-anonymous.html */
 
