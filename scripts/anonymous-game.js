@@ -11,6 +11,7 @@ const defeats = {
 let playerScore = 0;
 let computerScore = 0;
 let round = 1;
+let battlesWon = 0;
 
 function playGame(playerChoice) {
   const computerChoice = choices[Math.floor(Math.random() * choices.length)];
@@ -66,6 +67,7 @@ function resetGame() {
   round = 1;
   updateScore();
   console.clear();
+  battlesWon = battlesWon + 1;
 }
 
 // Lose modal
@@ -73,9 +75,11 @@ var modal = document.getElementById("end-game-modal");
 var playAgainBtn = document.getElementById("play-again");
 var closeModalBtn = document.getElementsByClassName("close")[0];
 var exitGameBtn = document.getElementById("admit-defeat");
+var endScore = document.getElementById("battles-won")
 
 openModalBtn.onclick = function () {
   modal.style.display = "block";
+  endScore.innerText = `${battlesWon}`
 };
 
 closeModalBtn.onclick = function () {
@@ -84,12 +88,10 @@ closeModalBtn.onclick = function () {
 
 playAgainBtn.onclick = function () {
   navigateToGame();
-  console.log('yep')
 };
 
 exitGameBtn.onclick = function () {
   navigateToHome();
-  console.log('yep')
 };
 
 function navigateToHome() {
