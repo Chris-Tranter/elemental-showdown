@@ -661,5 +661,122 @@ strong {
 
 /* ... */
 /* styles for game-anonymous.html */
+/* styles for game.html */
+#playerNameHeader {
+  text-align: center;
+  margin-top: 2rem;
+}
 
-/* styles for game-name.html */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.player-computer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.player-computer-container img {
+  max-width: 175px;
+  max-height: 175px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.player-name,
+.computer-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.game-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#roundResult,
+#finalResult {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.choice {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--air);
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.choice:hover {
+  transform: scale(1.1);
+}
+
+.choice img {
+  max-width: 60px;
+  max-height: 60px;
+}
+
+#result {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .player-computer-container {
+    flex-direction: column;
+  }
+
+  .player-computer-container img {
+    max-width: 120px;
+    max-height: 120px;
+    margin-bottom: 1rem;
+  }
+
+  .choices {
+    max-width: 300px;
+  }
+
+  .choice {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+  }
+
+  .choice img {
+    max-width: 50px;
+    max-height: 50px;
+  }
+}

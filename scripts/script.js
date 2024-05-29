@@ -88,7 +88,6 @@ var welcomeMessage = document.getElementById("welcomeMessage");
 if (welcomeMessage) {
   welcomeMessage.textContent = "Welcome, " + playerName + "!";
 }
-
 // logic for the timer
 let roundDuration = 5;
 let timer;

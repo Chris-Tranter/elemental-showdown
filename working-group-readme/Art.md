@@ -23,3 +23,5 @@ made some additional style changes to the stylesheet
 added a hero section and logo
 
 changed home layout and added assets from Waris
+
+fixed merge conflict and added another script file with the functionality for the game
