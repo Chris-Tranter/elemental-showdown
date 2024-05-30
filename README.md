@@ -50,7 +50,7 @@ For the Code Institute Bootcamp Hackathon #2, our team decided to complete the r
     
     - As a user I want to be able to see how many best of 3 battles I've won so that I can keep track of my achievements
 
-As a user I want to see the move I’ve selected going up against the move the computer has selected so that I can see for myself if I’ve won the round or not 
+    - As a user I want to see the move I’ve selected going up against the move the computer has selected so that I can see for myself if I’ve won the round or not 
 
 - Game end
 
