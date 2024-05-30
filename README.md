@@ -3,7 +3,7 @@
 For the Code Institute Bootcamp Hackathon #2, our team decided to complete the rock paper scissors game with a twist. Our player chooses between 6 different options based on the traditional chinese elements to play against the Singularity (our computer's randomly selected move) in a bes of 3 battle of the Elements!
 
 
-![Responsive Mockup]()
+![Responsive Mockup](./assets/img/responsive-mockup.png)
 
 ## Features 
 
