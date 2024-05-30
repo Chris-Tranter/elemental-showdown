@@ -1,67 +1,124 @@
-# elemental-showdown Group Hackathon
+# Elemental Showdown
 
-## Github cheat sheet because we all have access to main
+For the Code Institute Bootcamp Hackathon #2, our team decided to complete the rock paper scissors game with a twist. Our player chooses between 6 different options based on the traditional chinese elements to play against the Singularity (our computer's randomly selected move) in a bes of 3 battle of the Elements!
 
-1. Clone the project:
-   Open your terminal or command prompt.
-   Navigate to the directory where you want to clone the project.
-   Run the following command to clone the repository:
-   `git clone <repository-url>`
-   Replace <repository-url> with the URL of the project repository you want to clone.
 
-2. Navigate to the project directory:
-   After cloning, navigate into the cloned project directory using the cd command:
-   `cd <project-directory>`
-   Replace <project-directory> with the name of the cloned project directory.
+![Responsive Mockup]()
 
-3. Create a new branch:
-   Before making any changes, create a new branch to work on. Run the following command:
-   `git checkout -b <branch-name>`
-   Replace <branch-name> with a descriptive name for your branch (e.g., feature-login, bug-fix-123).
+## Features 
 
-4. Make changes and add them to the branch:
-   Open the project in your preferred code editor.
-   Make the necessary changes, additions, or modifications to the codebase.
-   After making changes, stage the modified files using the git add command:
-   `git add <file1> <file2> ...`
-   Replace <file1>, <file2>, etc., with the specific files you want to stage, or use git add . to stage all modified files.
-   however most developers just do `git add .` instead which adds all files to the branch.
 
-5. Commit the changes:
-   After staging the changes, commit them with a descriptive commit message using the git commit command:
-   `git commit -m "Your commit message"`
-   Replace "Your commit message" with a brief description of the changes you made.
+### User stories
 
-6. Push the branch to the remote repository:
-   Push the branch with your changes to the remote repository using the git push command:
-   `git push origin <branch-name>`
-   Replace <branch-name> with the name of the branch you created earlier.
+- Sitewide
 
-7. Create a pull request:
-   Open a web browser and navigate to the original repository on the platform where it is hosted (e.g., GitHub, GitLab).
-   You should see a notification or a button to create a new pull request for your recently pushed branch.
-   Click on the "Create Pull Request" button.
-   Provide a title and description for your pull request, explaining the changes you made.
-   Review the changes and make sure everything looks correct.
-   Click on the "Create Pull Request" button to submit your pull request.
+    - As a user I want a clickable logo in the header so that I can easily navigate back to the landing page
 
-8. Collaborate and address feedback:
-   After creating the pull request, the project maintainers or reviewers will review your changes.
-   They may provide feedback, request modifications, or ask questions about your changes.
-   Engage in the conversation, address any feedback or requested changes, and push additional commits to your branch if necessary.
+    - As a user I want there to be a background music toggle so that I can listen to something which fits the game as I play it
 
-9. Merge the pull request:
-   Once your pull request is approved and all discussions are resolved, the project maintainers will merge your changes into the main branch of the repository.
-   Congratulations! Your changes are now part of the project.
-   `git pull origin main`
+    - As a user I want a sound effects toggle so that I can turn off the in game sounds at the click of a button
 
-Remember to keep your local repository up to date by periodically pulling the latest changes from the main branch using `git pull origin main` before creating new branches and starting new work.
-`N.B` remember to only create a pull request when we are in a group huddle.
+    - As a user I want to be able to hear some fitting background music so that I can get more into the game I’m playing
 
-# Color Palette
+- Landing page 
 
-![pallette](./assets/img/elemental-showdown.png)
+    - As a user I want to see the rules of the game clearly on the landing page so that I can learn them quickly and start playing as soon as I understand them
 
-# Font Family
+    - As a user I want to be able to start the game from the landing page so that I can play it faster
 
-Exo2 is the custom font that we are using throughout the application as its a readable font and unique enough to display some originality.
+    - As a user I want  to be able to play the game without entering any information so that I can start playing instantly
+
+    - As a user I want to be able to sign in to the game with a name so that I can choose to play as myself or some other person/character for fun
+
+- Game
+
+    - As a user I want to be able to choose what element I want to use for each round so that I can have an impact on the game
+
+    - As a user I want so that I can
+
+    - As a user I want to be able to see the winner of every round so that I can understand what has happened in the game
+
+    - As a user I want see how many rounds the player and computer have won so that I can see who is about to win
+
+    - As a user I want to be able to see the current round number so that I can keep track of how far into the best of three I am
+
+    - As a user I want to see the winner of each round as it ends so that I can gain more of an understanding of what’s happening in the game
+
+    - As a user I want to hear sound effects for every element in the battle so that I can be more immersed
+
+    - As a user I want to have to make a decision on what element I want to use within a 5 second time limit so that the game can feel more intense
+    
+    - As a user I want to be able to see how many best of 3 battles I've won so that I can keep track of my achievements
+
+As a user I want to see the move I’ve selected going up against the move the computer has selected so that I can see for myself if I’ve won the round or not 
+
+- Game end
+
+    - As a user I want to see a message at the end of the best of 3 so that I can see if I’ve won or not
+
+    - As a user I want there to be a button on the endgame screen to play again so that I can continue playing with just one click
+
+    - As a user I want to see the name I’ve used to sign in referenced on the endgame screen so that I can be more invested in the outcome of the game
+
+    - As a user I want there to be a button on the endgame screen to return to the landing page so that I can return there with just one click
+
+    - As a user I want a score to be calculated from my performance so that I can easily see an idea of how I've done
+
+    - As a user I want to see a breakdown of my performance with data shown so that I can see bespoke feedback on how I've done 
+
+- Footer
+
+    - As the site owner I want there to be a footer with my copyright so that I can protect my IP
+
+    - As a user I want there to be a rules pop up on the footer so that I can check the rules of the game again as I’m playing
+
+### MoSCoW Table
+
+
+## Wireframes
+
+- __Landing page__
+
+- ![wireframes](./assets/img/wireframe-landing-page.png)
+
+- ![wireframes](./assets/img/wireframe-landing-page-hf.png)
+
+- __Game page__
+
+- ![wireframes](./assets/img/wireframe-game-running.png)
+
+- ![wireframes](./assets/img/wireframe-gameover-modal.png)
+
+- ![wireframes](./assets/img/wireframe-game-running-hf.png)
+
+- ![wireframes](./assets/img/wireframe-gameover-modal-hf.png)
+
+### Existing Features
+
+
+### Features We'd implement in the future if we could
+
+
+## Testing 
+
+
+### Feature Testing
+
+
+### Validator Testing 
+
+
+### Identified Bugs
+
+
+## Deployment
+
+https://elemental-showdown.netlify.app
+
+## Credits 
+
+
+### Content 
+
+
+### Media
