@@ -116,7 +116,6 @@ var welcomeMessage = document.getElementById("welcomeMessage");
 if (welcomeMessage) {
   welcomeMessage.textContent = "Welcome, " + playerName + "!";
 }
-
 // logic for the timer
 let roundDuration = 5;
 let timer;
@@ -184,7 +183,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Check if the audio should be playing based on the stored state
   var isPlaying = localStorage.getItem("audioPlaying");
   if (isPlaying === "true") {
-    backgroundAudio.play();
+    backgroundAudio.play().catch((error) => {
+      console.error("Error playing audio:", error);
+    });
     toggleAudio.textContent = "Turn Off Audio";
   } else {
     toggleAudio.textContent = "Turn On Audio";
@@ -193,7 +194,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Toggle audio on button click
   toggleAudio.addEventListener("click", function () {
     if (backgroundAudio.paused) {
-      backgroundAudio.play();
+      backgroundAudio.play().catch((error) => {
+        console.error("Error playing audio:", error);
+      });
       toggleAudio.textContent = "Turn Off Audio";
       localStorage.setItem("audioPlaying", "true");
     } else {
