@@ -8,81 +8,98 @@
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./assets/favicons/favicon-16x16.png"
+      href="../assets/favicons/favicon-16x16.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicons/favicon-32x32.png"
+      href="../assets/favicons/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="192x192"
-      href="./assets/favicons/android-chrome-192x192.png"
+      href="../assets/favicons/android-chrome-192x192.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="./assets/favicons/android-chrome-192x192.png"
+      href="../assets/favicons/android-chrome-192x192.png"
     />
     <link rel="stylesheet" href="../styles/global.css" />
     <title>Elemental Showdown</title>
   </head>
   <body>
-    <h1 id="playerNameHeader"></h1>
+    <header>
+      <nav>
+        <a href="/index.html" class="logo-link">
+          <div class="logo-container">
+            <img src="../assets/img/logo.png" alt="Elemental Showdown Logo" />
+          </div>
+        </a>
+        <!-- audio -->
+        <audio id="backgroundAudio" loop>
+          <source src="./assets/sounds/s-bg.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
 
-    <div class="game-container">
-      <div class="player-computer-container">
-        <div>
-          <img src="../assets/img/game-player.png" alt="Player" />
-          <div class="player-name" id="playerName"></div>
+        <button id="toggleAudio" class="audio-toggle">Toggle Audio</button>
+      </nav>
+    </header>
+    <main class="game-page-container">
+      <h1 id="playerNameHeader"></h1>
+
+      <div class="game-container">
+        <div class="player-computer-container">
+          <div class="player">
+            <img src="../assets/img/game-player.png" alt="Player" />
+            <div id="playersName"></div>
+          </div>
+          <div class="game-circle">
+            <div class="choices">
+              <button class="choice" onclick="playGame('fire')">
+                <img src="../assets/img/fire.png" alt="Fire" />
+              </button>
+              <button class="choice" onclick="playGame('earth')">
+                <img src="../assets/img/earth.png" alt="Earth" />
+              </button>
+              <button class="choice" onclick="playGame('air')">
+                <img src="../assets/img/air.png" alt="Air" />
+              </button>
+              <button class="choice" onclick="playGame('water')">
+                <img src="../assets/img/water.png" alt="Water" />
+              </button>
+              <button class="choice" onclick="playGame('wood')">
+                <img src="../assets/img/wood.png" alt="Wood" />
+              </button>
+              <button class="choice" onclick="playGame('iron')">
+                <img src="../assets/img/iron.png" alt="Iron" />
+              </button>
+            </div>
+            <div id="result"></div>
+          </div>
+          <div class="computer">
+            <img src="../assets/img/anonymous-player.png" alt="Computer" />
+            <div class="computer-name">Computer</div>
+          </div>
         </div>
-        <div>
-          <img src="../assets/img/anonymous-player.png" alt="Computer" />
-          <div class="computer-name">Computer</div>
+
+        <div class="game-info">
+          <div id="score"></div>
+          <div id="roundResult"></div>
+          <div id="finalResult"></div>
         </div>
       </div>
 
-      <div class="game-info">
-        <div id="score"></div>
-        <div id="roundResult"></div>
-        <div id="finalResult"></div>
-      </div>
-
-      <div class="choices">
-        <button class="choice" onclick="playGame('fire')">
-          <img src="../assets/img/fire.png" alt="Fire" />
-        </button>
-        <button class="choice" onclick="playGame('earth')">
-          <img src="../assets/img/earth.png" alt="Earth" />
-        </button>
-        <button class="choice" onclick="playGame('air')">
-          <img src="../assets/img/air.png" alt="Air" />
-        </button>
-        <button class="choice" onclick="playGame('water')">
-          <img src="../assets/img/water.png" alt="Water" />
-        </button>
-        <button class="choice" onclick="playGame('wood')">
-          <img src="../assets/img/wood.png" alt="Wood" />
-        </button>
-        <button class="choice" onclick="playGame('iron')">
-          <img src="../assets/img/iron.png" alt="Iron" />
-        </button>
-      </div>
-
-      <div id="result"></div>
-    </div>
-
-    <!-- Audio elements for sound effects -->
-    <audio id="fireSound" src="../assets/sounds/s-fire.mp3"></audio>
-    <audio id="earthSound" src="../assets/sounds/s-earth.mp3"></audio>
-    <audio id="airSound" src="../assets/sounds/s-air.mp3"></audio>
-    <audio id="waterSound" src="../assets/sounds/s-water.mp3"></audio>
-    <audio id="woodSound" src="../assets/sounds/s-wood.mp3"></audio>
-    <audio id="ironSound" src="../assets/sounds/s-iron.mp3"></audio>
-
+      <!-- Audio elements for sound effects -->
+      <audio id="fireSound" src="../assets/sounds/s-fire.mp3"></audio>
+      <audio id="earthSound" src="../assets/sounds/s-earth.mp3"></audio>
+      <audio id="airSound" src="../assets/sounds/s-air.mp3"></audio>
+      <audio id="waterSound" src="../assets/sounds/s-water.mp3"></audio>
+      <audio id="woodSound" src="../assets/sounds/s-wood.mp3"></audio>
+      <audio id="ironSound" src="../assets/sounds/s-iron.mp3"></audio>
+    </main>
     <script type="text/javascript" src="/scripts/script.js"></script>
     <script type="text/javascript" src="/scripts/game.js"></script>
     <script>
@@ -92,8 +109,17 @@
       var playerNameHeader = document.getElementById("playerNameHeader");
       playerNameHeader.textContent = "Welcome, " + playerName + "!";
       // Update the player name under the picture
-      var playerNameElement = document.getElementById("playerName");
+      var playerNameElement = document.getElementById("playersName");
       playerNameElement.textContent = playerName;
     </script>
+    <!-- <footer>
+      <p>&copy; 2023 Elemental Showdown. All rights reserved.</p>
+      <nav>
+        <ul>
+          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="#privacy">Privacy Policy</a></li>
+        </ul>
+      </nav>
+    </footer> -->
   </body>
 </html>
