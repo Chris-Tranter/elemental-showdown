@@ -8,10 +8,11 @@ Moscow sorted the features
 Created assets for game (pictures for elements)
 Add skeleton modal for end of anonymous game, displaying a score 
 Altered modal to fulfil MVP (only display the winner of the best of 3, no score)  
-Found new bg music at https://pixabay.com/music/china-chinese-classical-music-202971/
+Found new bg music at https://pixabay.com/music/world-the-chinese-modern-143818/
 Made moscow table
 Added completed modal for end of signed in game
 # 30/05/24 
+Fixed music on every page
 
 # Elemental Showdown
 
