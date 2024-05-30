@@ -14,5 +14,9 @@ Added completed modal for end of signed in game
 # 30/05/24 
 Fixed music on every page
 Added wireframes to read me
+Added User story/features and moscow tables to read me
+Added Existing and potential furture features
+Added sources citing media and content used
+
 
 

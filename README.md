@@ -3,7 +3,7 @@
 For the Code Institute Bootcamp Hackathon #2, our team decided to complete the rock paper scissors game with a twist. Our player chooses between 6 different options based on the traditional chinese elements to play against the Singularity (our computer's randomly selected move) in a bes of 3 battle of the Elements!
 
 
-![Responsive Mockup]()
+![Responsive Mockup](./assets/img/responsive-mockup.png)
 
 ## Features 
 
@@ -84,19 +84,19 @@ For the Code Institute Bootcamp Hackathon #2, our team decided to complete the r
 
 - __Landing page__
 
-- ![wireframes](./assets/img/wireframe-landing-page.png)
+![wireframes](./assets/img/wireframe-landing-page.png)
 
-- ![wireframes](./assets/img/wireframe-landing-page-hf.png)
+![wireframes](./assets/img/wireframe-landing-page-hf.png)
 
 - __Game page__
 
-- ![wireframes](./assets/img/wireframe-game-running.png)
+![wireframes](./assets/img/wireframe-game-running.png)
 
-- ![wireframes](./assets/img/wireframe-gameover-modal.png)
+![wireframes](./assets/img/wireframe-gameover-modal.png)
 
-- ![wireframes](./assets/img/wireframe-game-running-hf.png)
+![wireframes](./assets/img/wireframe-game-running-hf.png)
 
-- ![wireframes](./assets/img/wireframe-gameover-modal-hf.png)
+![wireframes](./assets/img/wireframe-gameover-modal-hf.png)
 
 ### Existing Features
 
@@ -133,7 +133,6 @@ For the Code Institute Bootcamp Hackathon #2, our team decided to complete the r
 
 - Footer
     - copyright
-    - rules pop up
 
 
 ### Features We'd implement in the future if we could
@@ -149,17 +148,41 @@ For the Code Institute Bootcamp Hackathon #2, our team decided to complete the r
     - calculate a score 
     - display breakdown of players performance 
 
+- Footer
+
+    - rules pop up
+
 ## Testing 
 
 
 ### Feature Testing
 
+![featuretesting](./assets/img/feature-testing-table.png)
 
 ### Validator Testing 
 
+- Javascript
+
+    - game.js : 2 errors 
+        ![validation](./assets/img/js-validation-game.png)
+
+    - game-anonymous.js : 2 errors
+        ![validation](./assets/img/js-validation-anonymousgame.png)
+
+    - script.js : 26 errors
+        ![validation](./assets/img/js-validation-script1.png)
+        ![validation](./assets/img/js-validation-script2.png)
+        ![validation](./assets/img/js-validation-script3.png)
+
+- CSS: No errors
+![validation](./assets/img/css-validation.png)
+
+- HTML 
+![validation](./assets/img/html-validation.png)
 
 ### Identified Bugs
 
+- Responsiveness on x-small screens
 
 ## Deployment
 
