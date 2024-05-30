@@ -26,7 +26,7 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="./assets/favicons/android-chrome-192x192.png"
+      href="../assets/favicons/android-chrome-192x192.png"
     />
     <link rel="shortcut icon" type="image/x-icon" href="/path/to/favicon.ico" />
     <link rel="stylesheet" href="./styles/global.css" />
@@ -51,21 +51,36 @@
       </nav>
     </header>
     <main>
-    <h1>Welcome to Elemental Showdown!</h1>
-    <p>Playing as Shadow Warrior</p>
-    <h1>Elemental Showdown</h1>
-    <div id="score">Player: 0 | Computer: 0</div>
-    <div class="choices">
-      <button class="choice" onclick="playGame('fire')">Fire</button>
-      <button class="choice" onclick="playGame('earth')">Earth</button>
-      <button class="choice" onclick="playGame('air')">Air</button>
-      <button class="choice" onclick="playGame('water')">Water</button>
-      <button class="choice" onclick="playGame('wood')">Wood</button>
-      <button class="choice" onclick="playGame('iron')">Iron</button>
-    </div>
-    <div id="result"></div>
-    <div id="roundResult"></div>
-    <div id="finalResult"></div>
+    <!-- Modal -->
+      <div id="end-game-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="end-result"></h2>
+          <h3 id="end-message"></h3>
+          <div class="button-container">
+            <button id="play-again" class="custom-button" >
+            </button>
+            <button id="admit-defeat" class="custom-button secondary-button">
+            </button>
+          </div>
+        </div>
+      </div>
+      <h1>Welcome to Elemental Showdown!</h1>
+      <p>Playing as Shadow Warrior</p>
+      <h1>Elemental Showdown</h1>
+      <div id="score">Player: 0 | Computer: 0</div>
+      <div class="choices">
+        <button class="choice" onclick="playGame('fire')">Fire</button>
+        <button class="choice" onclick="playGame('earth')">Earth</button>
+        <button class="choice" onclick="playGame('air')">Air</button>
+        <button class="choice" onclick="playGame('water')">Water</button>
+        <button class="choice" onclick="playGame('wood')">Wood</button>
+        <button class="choice" onclick="playGame('iron')">Iron</button>
+      </div>
+      <div id="result"></div>
+      <div id="roundResult"></div>
+      <div id="finalResult"></div>
+    </main>
     <script type="text/javascript" src="/scripts/script.js"></script>
     <script type="text/javascript" src="/scripts/anonymous-game.js"></script>
   </body>
