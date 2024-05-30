@@ -120,3 +120,40 @@ function navigateToGame() {
   var url = "./game.html";
   location.href = url;
 }
+
+// the audio player
+document.addEventListener("DOMContentLoaded", function () {
+  var backgroundAudio = document.getElementById("backgroundAudio");
+  var toggleAudio = document.getElementById("toggleAudio");
+
+  // Set the volume to a lower value (0.5 = 50% volume)
+  backgroundAudio.volume = 0.5;
+
+  // Check if the audio should be playing based on the stored state
+  var isPlaying = localStorage.getItem("audioPlaying");
+  if (isPlaying === "true") {
+    backgroundAudio.play().catch((error) => {
+      console.error("Error playing audio:", error);
+    });
+    toggleAudio.textContent = "Turn Off Audio";
+  } else {
+    toggleAudio.textContent = "Turn On Audio";
+  }
+
+  // Toggle audio on button click
+  toggleAudio.addEventListener("click", function () {
+    if (backgroundAudio.paused) {
+      backgroundAudio.play().catch((error) => {
+        console.error("Error playing audio:", error);
+      });
+      toggleAudio.textContent = "Turn Off Audio";
+      localStorage.setItem("audioPlaying", "true");
+    } else {
+      backgroundAudio.pause();
+      toggleAudio.textContent = "Turn On Audio";
+      localStorage.setItem("audioPlaying", "false");
+    }
+  });
+});
+
+//   ...
