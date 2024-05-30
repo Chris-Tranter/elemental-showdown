@@ -44,11 +44,10 @@ function playGame(playerChoice) {
     const finalResult = document.getElementById("finalResult");
     if (playerScore > computerScore) {
       finalResult.textContent = "You win the game!";
-      endOfGame('player')
+      endOfGame('player');
     } else if (playerScore < computerScore) {
       finalResult.textContent = "Computer wins the game!";
-      endOfGame('computer')
-
+      endOfGame('computer');
     } else {
       finalResult.textContent = "It's a tie game!";
     }
