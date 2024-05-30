@@ -48,6 +48,7 @@ function playGame(playerChoice) {
     } else if (playerScore < computerScore) {
       finalResult.textContent = "Computer wins the game!";
       endOfGame("computer");
+
     } else {
       finalResult.textContent = "It's a tie game!";
     }
