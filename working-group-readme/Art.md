@@ -25,3 +25,7 @@ added a hero section and logo
 changed home layout and added assets from Waris
 
 fixed merge conflict and added another script file with the functionality for the game
+
+# 30/05/24
+
+fixed a merge conflict and fixed the layout in the game-anonymous html and added more styles to it

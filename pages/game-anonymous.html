@@ -16,7 +16,6 @@
       sizes="32x32"
       href="../assets/favicons/favicon-32x32.png"
     />
-    <!-- <link rel="icon" type="image/png" sizes="48x48" href="./assets/favicons/"> -->
     <link
       rel="icon"
       type="image/png"
@@ -46,26 +45,56 @@
           <source src="../assets/sounds/s-bg.mp3" type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
-
         <button id="toggleAudio" class="audio-toggle">Toggle Audio</button>
       </nav>
     </header>
-    <main>
-    <h1>Welcome to Elemental Showdown!</h1>
-    <p>Playing as Shadow Warrior</p>
-    <h1>Elemental Showdown</h1>
-    <div id="score">Player: 0 | Computer: 0</div>
-    <div class="choices">
-      <button class="choice" onclick="playGame('fire')">Fire</button>
-      <button class="choice" onclick="playGame('earth')">Earth</button>
-      <button class="choice" onclick="playGame('air')">Air</button>
-      <button class="choice" onclick="playGame('water')">Water</button>
-      <button class="choice" onclick="playGame('wood')">Wood</button>
-      <button class="choice" onclick="playGame('iron')">Iron</button>
+    <!-- Modal -->
+    <div id="end-game-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="end-result"></h2>
+        <h3 id="end-message"></h3>
+        <div class="button-container">
+            <button id="play-again" class="custom-button" title="Play Again">Play Again</button>
+          </button>
+            <button id="admit-defeat" class="custom-button secondary-button" title="Admit Defeat">
+          </button>
+        </div>
+      </div>
     </div>
-    <div id="result"></div>
-    <div id="roundResult"></div>
-    <div id="finalResult"></div>
+  <!--/modal-->
+    <main class="anonymous-game-container">
+
+      <div class="anonymous-player-image">
+        <img src="../assets/img/anonymous-player.png" alt="Anonymous Player" />
+      </div>
+      <h1 class="anonymous-game-title">Welcome to Elemental Showdown!</h1>
+      <p class="anonymous-game-subtitle">Playing as Shadow Warrior</p>
+      <div id="score" class="anonymous-game-score">Player: 0 | Computer: 0</div>
+      <div class="anonymous-game-choices">
+        <button class="anonymous-game-choice" onclick="playGame('fire')">
+          <img src="../assets/img/fire-bw.png" alt="Fire" />
+        </button>
+        <button class="anonymous-game-choice" onclick="playGame('earth')">
+          <img src="../assets/img/earth-bw.png" alt="Earth" />
+        </button>
+        <button class="anonymous-game-choice" onclick="playGame('air')">
+          <img src="../assets/img/air-bw.png" alt="Air" />
+        </button>
+        <button class="anonymous-game-choice" onclick="playGame('water')">
+          <img src="../assets/img/warter-bw.png" alt="Water" />
+        </button>
+        <button class="anonymous-game-choice" onclick="playGame('wood')">
+          <img src="../assets/img/wood-bw.png" alt="Wood" />
+        </button>
+        <button class="anonymous-game-choice" onclick="playGame('iron')">
+          <img src="../assets/img/iron-bw.png" alt="Iron" />
+        </button>
+      </div>
+      <div id="result" class="anonymous-game-result"></div>
+      <div id="roundResult" class="anonymous-game-round-result"></div>
+      <div id="finalResult" class="anonymous-game-final-result"></div>
+    </main>
     <script type="text/javascript" src="/scripts/script.js"></script>
     <script type="text/javascript" src="/scripts/anonymous-game.js"></script>
   </body>

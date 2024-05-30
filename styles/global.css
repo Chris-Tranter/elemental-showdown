@@ -663,7 +663,6 @@ strong {
 }
 
 /* ... */
-/* styles for game-anonymous.html */
 
 /* styles for game.html */
 
@@ -831,4 +830,80 @@ strong {
   flex-direction: column;
   align-items: center;
   flex-grow: 1;
+}
+
+/* styles for game-anonymous.html */
+.anonymous-game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.anonymous-player-image {
+  margin-bottom: 1.5rem;
+}
+
+.anonymous-player-image img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.anonymous-game-choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.anonymous-game-choice {
+  margin: 10px;
+  background-color: var(--air);
+  border: none;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.anonymous-game-choice:hover {
+  transform: scale(1.1);
+}
+
+.anonymous-game-choice img {
+  max-width: 60px;
+  max-height: 60px;
+}
+
+.anonymous-game-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--iron);
+}
+
+.anonymous-game-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--iron);
+}
+
+.anonymous-game-score {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  color: var(--iron);
+}
+
+.anonymous-game-result,
+.anonymous-game-round-result,
+.anonymous-game-final-result {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: var(--iron);
 }
