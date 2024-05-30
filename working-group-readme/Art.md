@@ -29,3 +29,5 @@ fixed merge conflict and added another script file with the functionality for th
 # 30/05/24
 
 fixed a merge conflict and fixed the layout in the game-anonymous html and added more styles to it
+
+fixed the responsiveness of the model
