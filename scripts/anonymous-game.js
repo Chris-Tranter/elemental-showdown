@@ -44,10 +44,11 @@ function playGame(playerChoice) {
     const finalResult = document.getElementById("finalResult");
     if (playerScore > computerScore) {
       finalResult.textContent = "You win the game!";
-      endOfGame('player');
+      endOfGame("player");
     } else if (playerScore < computerScore) {
       finalResult.textContent = "Computer wins the game!";
-      endOfGame('computer');
+      endOfGame("computer");
+
     } else {
       finalResult.textContent = "It's a tie game!";
     }
@@ -76,22 +77,22 @@ var modal = document.getElementById("end-game-modal");
 var playAgainBtn = document.getElementById("play-again");
 var closeModalBtn = document.getElementsByClassName("close")[0];
 var exitGameBtn = document.getElementById("admit-defeat");
-var endResult = document.getElementById("end-result")
-var endMessage = document.getElementById("end-message")
+var endResult = document.getElementById("end-result");
+var endMessage = document.getElementById("end-message");
 
 function endOfGame(winner) {
   modal.style.display = "block";
-  if (winner === 'player') {
-    endResult.innerText = `You won the Elemental Showdown!`
-    endMessage.innerText = `You can now rest on your laurels or join the fight again!`
-    playAgainBtn.innerText = `Play Again!`
-    exitGameBtn.innerText = `Leave with Pride`
+  if (winner === "player") {
+    endResult.innerText = `You won the Elemental Showdown!`;
+    endMessage.innerText = `You can now rest on your laurels or join the fight again!`;
+    playAgainBtn.innerText = `Play Again!`;
+    exitGameBtn.innerText = `Leave with Pride`;
   } else {
-    endResult.innerText = `You lost the Elemental Showdown...`
-    endMessage.innerText = `The Singularity may have won this battle but you could win the war...`
-    playAgainBtn.innerText = `Try Again!`
-    exitGameBtn.innerText = `Accept Defeat...`
-  };
+    endResult.innerText = `You lost the Elemental Showdown...`;
+    endMessage.innerText = `The Singularity may have won this battle but you could win the war...`;
+    playAgainBtn.innerText = `Try Again!`;
+    exitGameBtn.innerText = `Accept Defeat...`;
+  }
 }
 
 closeModalBtn.onclick = function () {
