@@ -52,7 +52,7 @@ For the Code Institute Bootcamp Hackathon #2, our team decided to complete the r
 
     - As a user I want to see the move I’ve selected going up against the move the computer has selected so that I can see for myself if I’ve won the round or not 
 
-- Game end
+- Game End
 
     - As a user I want to see a message at the end of the best of 3 so that I can see if I’ve won or not
 
@@ -72,8 +72,13 @@ For the Code Institute Bootcamp Hackathon #2, our team decided to complete the r
 
     - As a user I want there to be a rules pop up on the footer so that I can check the rules of the game again as I’m playing
 
-### MoSCoW Table
+### Table of user stories and features
 
+![userstoriesandfeats](./assets/img/features-for-each-userstory.png)
+
+### MoSCoW Value/Effort Table
+
+![moscowtable](./assets/img/moscow-table.png)
 
 ## Wireframes
 
@@ -95,9 +100,54 @@ For the Code Institute Bootcamp Hackathon #2, our team decided to complete the r
 
 ### Existing Features
 
+- Sitewide
+
+    - header
+    - music toggle
+    - sound effects toggle
+    - background music
+
+- Landing Page
+
+    - rules
+    - start game
+    - anonymous sign in
+    - name sign in
+
+- Game
+
+    - user move selection
+    - display winner after every move
+    - display number of rounds won
+    - display current round number
+    - display winner after every move
+    - sounds for each element and button clicks
+    - display of users move against CPU move (sound effect)
+
+- Game End
+
+    - display a message on game end
+    - button to try again
+    - mention signed in user on game end
+    - button on defeat links to homepage
+
+- Footer
+    - copyright
+    - rules pop up
+
 
 ### Features We'd implement in the future if we could
 
+- Game
+
+    - display of users move against CPU move (visual showing both the player and computer's moves head to head)
+    - timer for making a decision 
+    - display number of battles won 
+
+- Game End
+
+    - calculate a score 
+    - display breakdown of players performance 
 
 ## Testing 
 
@@ -120,5 +170,14 @@ https://elemental-showdown.netlify.app
 
 ### Content 
 
+Written text - Waris Gaspard
 
 ### Media
+
+- Background Music - 'The Chinese Modern' by FreddyMusic2 on Pixabay, taken from: https://pixabay.com/music/world-the-chinese-modern-143818/
+
+- Elemental Sound-effects - sourced from https://www.zapsplat.com/
+
+- Site logo - Arthur Beckett
+- Art - Waris Gaspard
+
