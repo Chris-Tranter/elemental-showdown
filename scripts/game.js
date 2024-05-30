@@ -47,8 +47,10 @@ function playGame(playerChoice) {
     const finalResult = document.getElementById("finalResult");
     if (playerScore > computerScore) {
       finalResult.textContent = "You win the game!";
+      endOfGame('player');
     } else if (playerScore < computerScore) {
       finalResult.textContent = "Computer wins the game!";
+      endOfGame('computer');
     } else {
       finalResult.textContent = "It's a tie game!";
     }
@@ -71,4 +73,50 @@ function resetGame() {
   round = 1;
   updateScore();
   console.clear();
+}
+
+// End of Game modal
+var modal = document.getElementById("end-game-modal");
+var playAgainBtn = document.getElementById("play-again");
+var closeModalBtn = document.getElementsByClassName("close")[0];
+var exitGameBtn = document.getElementById("admit-defeat");
+var endResult = document.getElementById("end-result")
+var endMessage = document.getElementById("end-message")
+var playerName = localStorage.getItem("playerName");
+
+function endOfGame(winner) {
+  modal.style.display = "block";
+  if (winner === 'player') {
+    endResult.innerText = `You won the Elemental Showdown!`
+    endMessage.innerText = `You can now rest on your laurels ${playerName} or join the fight again!`
+    playAgainBtn.innerText = `Play Again!`
+    exitGameBtn.innerText = `Leave with Pride`
+  } else {
+    endResult.innerText = `You lost the Elemental Showdown...`
+    endMessage.innerText = `The Singularity may have won this battle ${playerName} but you could win the war...`
+    playAgainBtn.innerText = `Try Again!`
+    exitGameBtn.innerText = `Accept Defeat...`
+  };
+}
+
+closeModalBtn.onclick = function () {
+  modal.style.display = "none";
+};
+
+playAgainBtn.onclick = function () {
+  navigateToGame();
+};
+
+exitGameBtn.onclick = function () {
+  navigateToHome();
+};
+
+function navigateToHome() {
+  var url = "../index.html";
+  location.href = url;
+}
+
+function navigateToGame() {
+  var url = "./game.html";
+  location.href = url;
 }
